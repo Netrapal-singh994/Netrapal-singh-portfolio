@@ -7,9 +7,9 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="w-full sticky top-0 z-50 bg-gray-900 shadow-md">
+    <header className="w-full  sticky top-0 z-50 bg-[#1A1C2B] shadow-md text-white">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-4 h-[90px]">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             {/* <img
@@ -17,7 +17,7 @@ export default function Navbar() {
               alt="Logo"
               className="h-10 w-auto"
             /> */}
-            <p>Netrapal</p>
+            <p><img src="nslogo.png" className="w-[200px] h-auto"/></p>
           </Link>
 
           {/* Desktop Menu */}
@@ -32,7 +32,7 @@ export default function Navbar() {
               <ul className="absolute left-0 hidden w-48 bg-gray-800 shadow-lg rounded-lg group-hover:block">
                 <li>
                   <Link
-                    href="/service-list"
+                    href="/"
                     className="block px-4 py-2 hover:text-red-500"
                   >
                     Services
@@ -159,7 +159,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Link
               href="/contact"
-              className="bg-red-500 text-white px-5 py-2 rounded-lg hover:bg-red-600 transition"
+              className="bg-[#1A1C2B] text-white px-5 py-2 rounded-lg hover:bg-[#24263A] transition border border-gray-600 font-medium"
             >
               Hire Me →
             </Link>
@@ -176,7 +176,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="lg:hidden bg-white shadow-md border-t">
+          <div className="lg:hidden bg-[#1A1C2B] shadow-md border-t">
             <ul className="flex flex-col space-y-4 py-4 px-6">
               <li>
                 <Link href="/" onClick={() => setMobileOpen(false)}>
@@ -206,7 +206,7 @@ export default function Navbar() {
               <li>
                 <Link
                   href="/contact"
-                  className="bg-red-500 text-white px-4 py-2 rounded-lg text-center"
+                 className="bg-[#1A1C2B] text-white px-5 py-2 rounded-lg hover:bg-[#24263A] transition border border-gray-600 font-medium"
                   onClick={() => setMobileOpen(false)}
                 >
                   Hire Me →
