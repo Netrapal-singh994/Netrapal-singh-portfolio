@@ -7,7 +7,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="w-full  sticky top-0 z-50 bg-[#1A1C2B] shadow-md text-white">
+    <header className="w-full  sticky top-0 z-50 bg-gray-900 shadow-md text-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center py-4 h-[90px]">
           {/* Logo */}
@@ -17,151 +17,53 @@ export default function Navbar() {
               alt="Logo"
               className="h-10 w-auto"
             /> */}
-            <p><img src="nslogo.png" className="w-[200px] h-auto"/></p>
+            <p>
+              <img src="nslogo.png" className="w-[200px] h-auto" />
+            </p>
           </Link>
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex space-x-8">
-            <Link href="/" className="hover:text-red-500 font-medium">
+            <Link
+              href="/"
+              className="hover:text-indigo-400 transition font-medium"
+            >
               Home
             </Link>
-            <div className="group relative">
-              <Link href="/services" className="hover:text-red-500 font-medium">
-                Services
-              </Link>
-              <ul className="absolute left-0 hidden w-48 bg-gray-800 shadow-lg rounded-lg group-hover:block">
-                <li>
-                  <Link
-                    href="/"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/service-details"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    Service Details
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="group relative">
-              <Link href="/blog" className="hover:text-red-500 font-medium">
-                Blog
-              </Link>
-              <ul className="absolute left-0 hidden w-56 bg-gray-800 shadow-lg rounded-lg group-hover:block">
-                <li>
-                  <Link
-                    href="/blog-list"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    Blog List Full Width
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog-list-sidebar-left"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    Blog List Left Sidebar
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog-list-sidebar-right"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    Blog List Right Sidebar
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog-details"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    Blog Details Full Width
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog-details-sidebar-left"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    Blog Details Left Sidebar
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog-details-sidebar-right"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    Blog Details Right Sidebar
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="group relative">
-              <Link href="#" className="hover:text-red-500 font-medium">
-                Pages
-              </Link>
-              <ul className="absolute left-0 hidden w-48 bg-gray-800 shadow-lg rounded-lg group-hover:block">
-                <li>
-                  <Link
-                    href="/about"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/project-list"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    Project
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/project-details"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    Project Details
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/faq"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/404"
-                    className="block px-4 py-2 hover:text-red-500"
-                  >
-                    404 Page
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <Link href="/contact" className="hover:text-red-500 font-medium">
-              Contact
+            <Link
+              href="/services"
+              className="hover:text-indigo-400 transition font-medium"
+            >
+              Services
             </Link>
+            <Link
+              href="/blogs"
+              className="hover:text-indigo-400 transition font-medium"
+            >
+              Blog
+            </Link>
+            {/* <Link href="#" className="hover:text-indigo-400 transition font-medium">
+              Pages
+            </Link> */}
+            <Link
+              href="/faq"
+              className="hover:text-indigo-400 transition font-medium"
+            >
+              FAQ
+            </Link>
+            {/* <Link href="/404" className="hover:text-indigo-400 transition font-medium">
+              404 Page
+            </Link> */}
           </nav>
 
           {/* Hire Me Button (Desktop) */}
           <div className="hidden lg:block">
             <Link
               href="/contact"
-              className="bg-[#1A1C2B] text-white px-5 py-2 rounded-lg hover:bg-[#24263A] transition border border-gray-600 font-medium"
+              className="bg-gray-900 text-white hover:text-indigo-400 px-5 py-2 rounded-lg hover:bg-gray-800 
+               transition border border-gray-600 font-medium "
             >
-              Hire Me →
+              Contact
             </Link>
           </div>
 
@@ -176,7 +78,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="lg:hidden bg-[#1A1C2B] shadow-md border-t">
+          <div className="lg:hidden bg-gray-800 shadow-md border-t w-full">
             <ul className="flex flex-col space-y-4 py-4 px-6">
               <li>
                 <Link href="/" onClick={() => setMobileOpen(false)}>
@@ -204,13 +106,13 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   href="/contact"
-                 className="bg-[#1A1C2B] text-white px-5 py-2 rounded-lg hover:bg-[#24263A] transition border border-gray-600 font-medium"
+                  className="bg-[#1A1C2B] text-white px-5 py-2 rounded-lg hover:bg-[#24263A] transition border border-gray-600 font-medium"
                   onClick={() => setMobileOpen(false)}
                 >
-                  Hire Me →
-                </Link>
+                  Contact
+                </Link> */}
               </li>
             </ul>
           </div>

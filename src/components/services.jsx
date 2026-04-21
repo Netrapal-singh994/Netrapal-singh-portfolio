@@ -1,4 +1,4 @@
-// components/ServicesSection.tsx
+"use client";
 import { FaPencilRuler, FaCode, FaBezierCurve } from "react-icons/fa";
 
 export default function Services() {
@@ -33,31 +33,42 @@ export default function Services() {
   ];
 
   return (
-    <section className="bg-[#1A1C2B] text-white py-20 px-6" id="services">
+    <section className="w-full py-24 px-6  text-white" id="services">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="mb-12">
-          <p className="uppercase tracking-wide text-gray-400 text-sm">
-            || My Services
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-snug">
-            Service Provide For My Clients.
+        {/* HEADER */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+            Service Provide For My Clients
           </h2>
+          <p className="text-gray-400 mt-4 max-w-xl mx-auto">
+            I deliver high-quality design and development solutions that help
+            businesses grow and stand out in the digital world.
+          </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="bg-[#24263A] p-8 rounded-md shadow hover:shadow-lg transition"
+              className="group bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl hover:scale-105 hover:border-indigo-500 transition-all duration-300 shadow-lg"
             >
-              <div className="mb-6 text-white">{service.icon}</div>
+              {/* ICON */}
+              <div className="mb-6 w-16 h-16 flex items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition">
+                {service.icon}
+              </div>
+
+              {/* TITLE */}
               <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+
+              {/* LIST */}
               <ul className="space-y-2 text-gray-300 text-sm">
                 {service.items.map((item, i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    <span className="text-gray-400">»</span> {item}
+                  <li
+                    key={i}
+                    className="flex items-center gap-2 group-hover:translate-x-1 transition"
+                  >
+                    <span className="text-indigo-400">✔</span> {item}
                   </li>
                 ))}
               </ul>

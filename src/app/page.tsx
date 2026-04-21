@@ -6,10 +6,10 @@ import Hero from "@/components/hero";
 import Skills from "@/components/skills";
 import Services from "@/components/services";
 import Projects from "@/components/projects";``
-
+import Counter from "@/components/projectcount";
 export default function Home() {
   return (
-    <main className="text-white bg-[#1A1C2B]">
+    <main className="text-white bg-gray-900">
       {/* Hero */}
       <Hero/>
       {/* Services */}
@@ -17,23 +17,9 @@ export default function Home() {
       {/* Skills */}
            <Skills/>
       {/* Stats */}
-      <section className="py-16 container mx-auto text-center  bg-[#1A1C2B]">
-        <div className="grid grid-cols-3 gap-8">
-          <div>
-            <span className="text-5xl font-extrabold">2,58+</span>
-            <p className="text-gray-600">Happy Clients</p>
-          </div>
-          <div>
-            <span className="text-5xl font-extrabold">590 K</span>
-            <p className="text-gray-600">Project Complete</p>
-          </div>
-          <div>
-            <span className="text-5xl font-extrabold">28+</span>
-            <p className="text-gray-600">Years of Experience</p>
-          </div>
-        </div>
-      </section>
 
+      <Counter />
+     
       {/* Portfolio */}
         <Projects/>
     </main>
