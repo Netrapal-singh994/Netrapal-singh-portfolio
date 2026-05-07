@@ -1,35 +1,44 @@
 import Link from "next/link";
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gray-900 text-gray-400 px-6 py-10">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
-        {/* LEFT - BRAND */}
-        <div className="md:col-span-2">
-          <h2 className="text-2xl font-bold text-white mb-3">Netrapal Singh</h2>
-          <p className="text-sm leading-relaxed">
-            Frontend Developer focused on building modern, responsive and
-            user-friendly web applications using React, Next.js and Tailwind.
+    <footer className="w-full bg-gray-900 text-gray-400 px-6 py-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 ">
+        {/* LEFT - LOGO */}
+        <div className="flex flex-col  col-span-1 md:col-span-2  mt-[-50px]">
+          <Link href="/" className="">
+            <img
+              src="nslogo.png"
+              className="w-[150px] h-auto object-contain"
+              alt="logo"
+            />
+          </Link>
+
+          <p className="text-sm leading-relaxed max-w-xs">
+            Frontend Developer building modern, responsive and user-friendly web
+            applications using React, Next.js and Tailwind CSS.
           </p>
         </div>
 
-        {/* CENTER - QUICK LINKS */}
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
-          <ul className="space-y-2">
+        {/* QUICK LINKS */}
+        <div className="flex flex-col items-start lg:items-center">
+          <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+
+          <ul className="space-y-3 text-sm">
             <li>
-              <Link href="#home" className="hover:text-indigo-400 transition">
+              <Link href="/" className="hover:text-indigo-400 transition">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="#about" className="hover:text-indigo-400 transition">
+              <Link href="/about" className="hover:text-indigo-400 transition">
                 About
               </Link>
             </li>
             <li>
               <Link
-                href="#projects"
+                href="/projects"
                 className="hover:text-indigo-400 transition"
               >
                 Projects
@@ -37,7 +46,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="#contact"
+                href="/contact"
                 className="hover:text-indigo-400 transition"
               >
                 Contact
@@ -46,46 +55,39 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* RIGHT - SOCIAL LINKS */}
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Connect</h3>
-          <ul
-            className="space-y-2
-          "
-          >
-            <li>
-              <Link
-                href="https://www.linkedin.com/in/netrapal-singh-a1b300325/"
-                target="_blank"
-                className="hover:text-indigo-400 transition "
-              >
-                LinkedIn
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://github.com/Netrapal-singh994"
-                target="_blank"
-                className="hover:text-indigo-400 transition"
-              >
-                GitHub
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://twitter.com"
-                target="_blank"
-                className="hover:text-indigo-400 transition"
-              >
-                Twitter
-              </Link>
-            </li>
-          </ul>
+        {/* CONNECT */}
+        <div className="flex flex-col  lg:items-center">
+          <h3 className="text-lg font-semibold text-white mb-4 ">Connect</h3>
+
+          <div className="flex gap-4">
+            <Link
+              href="https://www.linkedin.com/in/netrapal-singh-a1b300325/"
+              target="_blank"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-600 hover:bg-indigo-500 transition"
+            >
+              <FaLinkedinIn />
+            </Link>
+
+            <Link
+              href="https://github.com/Netrapal-singh994"
+              target="_blank"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-600 hover:bg-indigo-500 transition"
+            >
+              <FaGithub />
+            </Link>
+
+            <Link
+              href="#"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-600 hover:bg-indigo-500 transition"
+            >
+              <FaTwitter />
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* BOTTOM */}
-      <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
         © {new Date().getFullYear()} Netrapal Singh. All rights reserved.
       </div>
     </footer>

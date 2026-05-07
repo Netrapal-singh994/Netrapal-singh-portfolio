@@ -3,7 +3,7 @@ import { projects } from "../data/data";
 import Link from "next/link";
 export default function Projects() {
   return (
-    <section className="w-full py-24 px-6  text-white">
+    <section id="projects" className="w-full py-24 px-6  text-white">
       <div className="max-w-6xl mx-auto">
         {/* HEADER */}
         <div className="text-center mb-16">

@@ -23,7 +23,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex space-x-8">
+          <nav className="hidden md:flex space-x-8">
             <Link
               href="/"
               className="hover:text-indigo-400 transition font-medium"
@@ -37,10 +37,10 @@ export default function Navbar() {
               Services
             </Link>
             <Link
-              href="/blogs"
+              href="/about"
               className="hover:text-indigo-400 transition font-medium"
             >
-              Blog
+              About
             </Link>
             {/* <Link href="#" className="hover:text-indigo-400 transition font-medium">
               Pages
@@ -57,7 +57,7 @@ export default function Navbar() {
           </nav>
 
           {/* Hire Me Button (Desktop) */}
-          <div className="hidden lg:block">
+          <div className="hidden md:block">
             <Link
               href="/contact"
               className="bg-gray-900 text-white hover:text-indigo-400 px-5 py-2 rounded-lg hover:bg-gray-800 
@@ -69,7 +69,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden p-2 rounded-md border border-gray-300"
+            className="md:hidden p-2 rounded-md border border-gray-300"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -77,46 +77,50 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {mobileOpen && (
-          <div className="lg:hidden bg-gray-800 shadow-md border-t w-full">
-            <ul className="flex flex-col space-y-4 py-4 px-6">
-              <li>
-                <Link href="/" onClick={() => setMobileOpen(false)}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" onClick={() => setMobileOpen(false)}>
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" onClick={() => setMobileOpen(false)}>
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" onClick={() => setMobileOpen(false)}>
-                  Pages
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" onClick={() => setMobileOpen(false)}>
-                  Contact
-                </Link>
-              </li>
-              <li>
-                {/* <Link
-                  href="/contact"
-                  className="bg-[#1A1C2B] text-white px-5 py-2 rounded-lg hover:bg-[#24263A] transition border border-gray-600 font-medium"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Contact
-                </Link> */}
-              </li>
-            </ul>
+        {/* Mobile Menu */}
+        <div
+          className={`fixed top-0 right-0 h-full w-[330px] bg-gray-800 shadow-lg transform transition-transform duration-300 z-50
+  ${mobileOpen ? "translate-x-0" : "translate-x-full"}`}
+        >
+          <div className="flex items-center justify-between h-[90px] p-4 border-b border-gray-700">
+            {/* Logo */}
+            <Link href="/" onClick={() => setMobileOpen(false)}>
+              <img src="nslogo.png" className="w-[140px] h-auto" />
+            </Link>
+
+            {/* Close Button */}
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-600 hover:bg-gray-700 transition"
+            >
+              <X size={22} />
+            </button>
           </div>
-        )}
+
+          {/* Menu Items */}
+          <ul className="flex flex-col space-y-6 px-6 mt-1 text-lg">
+            <li>
+              <Link href="/" onClick={() => setMobileOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" onClick={() => setMobileOpen(false)}>
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" onClick={() => setMobileOpen(false)}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" onClick={() => setMobileOpen(false)}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
   );

@@ -18,8 +18,9 @@ export default function Services() {
             <div className="text-indigo-400 text-4xl mb-4">🎨</div>
             <h3 className="text-xl font-semibold mb-2">UI/UX Design</h3>
             <p className="text-gray-400 text-sm">
-              Modern, clean, and user-friendly interface designs focused on
-              better user experience.
+              Experienced in crafting intuitive user experiences through landing
+              pages, dashboard interfaces, and structured user flows, with
+              strong fundamentals in typography and interaction design.
             </p>
           </div>
 
@@ -28,18 +29,23 @@ export default function Services() {
             <div className="text-indigo-400 text-4xl mb-4">💻</div>
             <h3 className="text-xl font-semibold mb-2">Web Development</h3>
             <p className="text-gray-400 text-sm">
-              Fast, responsive, and scalable websites using modern technologies
-              like React and Next.js.
+              Experienced in building modern, responsive, and scalable web
+              applications using HTML, CSS, JavaScript, React.js, Next.js,
+              Tailwind CSS, and Bootstrap, with a focus on performance and clean
+              UI.
             </p>
           </div>
 
           {/* CARD 3 */}
           <div className="group p-8 rounded-2xl bg-gray-800 border border-gray-700 hover:border-indigo-500 hover:scale-105 transition-all duration-300 shadow-lg">
-            <div className="text-indigo-400 text-4xl mb-4">✨</div>
-            <h3 className="text-xl font-semibold mb-2">Illustration</h3>
+            <div className="text-indigo-400 text-4xl mb-4">📚</div>
+            <h3 className="text-xl font-semibold mb-2">Libraries</h3>
             <p className="text-gray-400 text-sm">
-              Creative visuals and graphics that enhance brand identity and user
-              engagement.
+              Proficient in modern React libraries like Redux Toolkit, React
+              Query (TanStack), Framer Motion, GSAP, Zustand, and Mantine to
+              build scalable, high-performance, and visually engaging web
+              applications with efficient state management and smooth
+              animations.
             </p>
           </div>
         </div>

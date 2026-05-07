@@ -53,21 +53,21 @@ export default function StatsSection() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-6">
         <div>
           <h2 className="text-5xl font-extrabold text-white">
-            <Counter end={258} />
+            <Counter end={3} />
           </h2>
           <p className="text-gray-400 mt-2">Happy Clients</p>
         </div>
 
         <div>
           <h2 className="text-5xl font-extrabold text-white">
-            <Counter end={590} />
+            <Counter end={3} />
           </h2>
           <p className="text-gray-400 mt-2">Project Complete</p>
         </div>
 
         <div>
           <h2 className="text-5xl font-extrabold text-white">
-            <Counter end={28} />
+            <Counter end={1} />
           </h2>
           <p className="text-gray-400 mt-2">Years of Experience</p>
         </div>

@@ -1,80 +1,138 @@
-// app/page.tsx (Next.js 13+ App Router)
-// or pages/index.tsx (Next.js 12/Pages Router)
+"use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { FaFacebookF, FaLinkedinIn, FaDribbble } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <main className="min-h-screen flex items-center justify-center px-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-6xl w-full">
-        {/* Left Side Content */}
-        <div className="text-white space-y-6">
-          <h1 className="text-5xl md:text-6xl font-bold">
+    <main className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-10 py-10 overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 max-w-7xl w-full">
+        {/* Left Content */}
+        <div className="text-white space-y-6 text-center lg:text-left order-2 lg:order-1">
+          <h1 className="font-bold leading-tight text-4xl sm:text-5xl md:text-6xl">
             Hello! I’m <br />
-            <span className="text-6xl md:text-7xl">Netrapal Singh</span>
+            <span className="text-white">Netrapal Singh</span>
           </h1>
-          <p className="text-gray-400 text-lg">
-            UI/UX Designer specializing in Shopify & Webflow.
+
+          <p className="text-gray-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+            Turning ideas into interactive, high-performance web experiences
+            with modern frontend technologies.
           </p>
 
-          {/* Buttons */}
-          <div className="flex items-center gap-6">
-            <Link
-              href="#"
-              className="px-6 py-3 rounded-full bg-gray-900 hover:bg-gray-800 transition flex items-center gap-2 border border-gray-600 font-medium"
+          <div className="flex justify-center lg:justify-start">
+            <button
+              className="
+                px-6 py-3
+                rounded-full
+                bg-gray-900
+                hover:bg-gray-800
+                transition
+                flex items-center gap-2
+                border border-gray-600
+                font-medium
+                text-sm sm:text-base
+              "
             >
               Get Resume <span className="text-lg">⬇</span>
-            </Link>
-            {/* <button className="flex items-center gap-3 text-gray-300 hover:text-white transition">
-              <div className="w-14 h-14 flex items-center justify-center rounded-full border-4 border-gray-500">
-                <div className="w-4 h-4 border-l-8 border-transparent border-l-white" />
-              </div>
-              <span>Watch Video</span>
-            </button> */}
+            </button>
           </div>
         </div>
 
-        {/* Right Side - Image with Social Icons */}
-        <div className="relative flex justify-center">
-          <Image
-            src="/images1.jpg"
-            alt="Mirta Akins"
-            width={350}
-            height={400}
-            className="relative z-10 w-[400px] h-[380px] rounded-full border border-gray-600 object-cover mr-28 mt-8"
+        {/* Right Image Section */}
+        <div className="relative flex justify-center items-center order-1 lg:order-2">
+          {/* Profile Image */}
+          <img
+            src="/neta.jpeg"
+            alt="Netrapal Singh"
+            className="
+              relative z-10
+              object-cover
+              rounded-full
+              border border-gray-600
+
+              w-[220px] h-[220px]
+              sm:w-[280px] sm:h-[280px]
+              md:w-[340px] md:h-[340px]
+              lg:w-[420px] lg:h-[420px]
+            "
           />
 
-          {/* Social Links Circle */}
+          {/* Outer Circle */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-[400px] h-[400px] rounded-full border border-gray-600 relative">
-              {/* Facebook */}
+            <div
+              className="
+                relative
+                rounded-full
+                border border-gray-500
+
+                w-[270px] h-[270px]
+                sm:w-[340px] sm:h-[340px]
+                md:w-[410px] md:h-[410px]
+                lg:w-[500px] lg:h-[500px]
+              "
+            >
+              {/* Github */}
               <Link
-                href="#"
-                className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center hover:bg-gray-700"
+                href="https://github.com/Netrapal-singh994"
+                target="_blank"
+                className="
+                  absolute
+                  top-0 left-1/2
+                  -translate-x-1/2 -translate-y-1/2
+
+                  w-10 h-10 sm:w-12 sm:h-12
+                  rounded-full
+                  border border-gray-500
+                  bg-gray-900
+                  flex items-center justify-center
+                  hover:bg-gray-800
+                  transition
+                "
               >
-                <FaFacebookF />
+                <FaGithub className="text-white text-sm sm:text-lg" />
               </Link>
-              {/* Dribbble */}
+
+              {/* Instagram */}
               <Link
-                href="#"
-                className="absolute  right-[-25px] top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center hover:bg-gray-700"
+                href="https://www.instagram.com/netrapalsinghbasendra/"
+                target="_blank"
+                className="
+                  absolute
+                  right-0 top-1/2
+                  translate-x-1/2 -translate-y-1/2
+
+                  w-10 h-10 sm:w-12 sm:h-12
+                  rounded-full
+                  border border-gray-500
+                  bg-gray-900
+                  flex items-center justify-center
+                  hover:bg-gray-800
+                  transition
+                "
               >
-                <FaDribbble />
+                <FaInstagram className="text-white text-sm sm:text-lg" />
               </Link>
+
               {/* LinkedIn */}
               <Link
-                href="#"
-                className="absolute  right-[13px] top-[320px] -translate-x-1/2 w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center hover:bg-gray-700"
+                href="https://www.linkedin.com/in/netrapal-singh-a1b300325/"
+                target="_blank"
+                className="
+                  absolute
+                  bottom-4 right-8
+                  sm:bottom-6 sm:right-12
+                  md:bottom-8 md:right-16
+
+                  w-10 h-10 sm:w-12 sm:h-12
+                  rounded-full
+                  border border-gray-500
+                  bg-gray-900
+                  flex items-center justify-center
+                  hover:bg-gray-800
+                  transition
+                "
               >
-                <FaLinkedinIn />
-              </Link>
-              <Link
-                href="#"
-                className="absolute right-[22px] top-1/6 -translate-y-1/2 w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center hover:bg-gray-700"
-              >
-                <FaLinkedinIn />
+                <FaLinkedinIn className="text-white text-sm sm:text-lg" />
               </Link>
             </div>
           </div>
