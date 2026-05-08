@@ -31,7 +31,6 @@ export default function About() {
             creating seamless user experiences with clean and intuitive
             interfaces.
           </p>
-
           <p className="text-gray-400 mb-6 leading-relaxed">
             I enjoy turning ideas into real-world digital products that are both
             visually appealing and highly functional. With a keen eye for design
