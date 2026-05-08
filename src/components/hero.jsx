@@ -42,7 +42,7 @@ export default function Hero() {
         <div className="relative flex justify-center items-center order-1 lg:order-2">
           {/* Profile Image */}
           <img
-            src="/neta.jpeg"
+            src="neta.jpeg"
             alt="Netrapal Singh"
             className="
               relative z-10
